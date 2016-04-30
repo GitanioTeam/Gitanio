@@ -16,6 +16,8 @@ Assim temos como responsaveis por este projeto e escopo os alunos do curso de En
 - Julianny Alves
 - Pedro Henrique
 - Paulo de Oliveira
+- Gabriela Aimée
+- Daniel Vasconcelos
 
 ###Escopo do Sistema de Retaguarda com integração Web/Mobile
 

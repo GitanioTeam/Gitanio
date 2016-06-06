@@ -23,3 +23,5 @@ Assim temos como responsaveis por este projeto e escopo os alunos do curso de En
 
 Este sistema é alvo aplicação de conhecimentos em uma area do mercado que a cada dia esta sempre evoluindo. Tal tem como foco sua comercialização no mercado competivitivo de automação comercial. Dois dos quatros integrantes ja possuem conhecimentos básicos necessarios para a criação deste sistema, sendo assim tornando a engenharia de requisitos ser possivel de ser realizada somente pela equipe que ira desenvolver o sistema. 
 O sistema de gestão que sera desenvolvido na plataforma WEB com algumas funcionalidades integradas a plataforma mobile. No qual ira permitir que os gestores das empresas que usufrutem deste sistema, tenha a facilidade e acessibilidade de acompanhar a gestão de seu comercio de qualquer lugar atraves de seu smartphone.
+
+[waffle.io do projeto](https://waffle.io/gustavosotnas/Gitanio)

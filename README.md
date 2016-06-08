@@ -1,7 +1,7 @@
 ![Gitânio](https://github.com/gustavosotnas/Gitanio/wiki/Projeto/Extras/Icone/gitanio.png) Gitânio
 ==================================================================================================
 
-#### *Sistema de Gestão para Automação Comercial Aplicado para Programa de Aplicativo Fiscal (PAF)*
+#### *Sistema de Gestão Comercial*
 
 Buscando automatizar processos comerciais, e agilizar os processos manuais desenvolvidos pelo corpo de funcionarios de um comercio. E visando obter eficiencia e satisfação dos clientes e dos fornecedores do mercado no ambito do comercio do País. 
 

@@ -11,4 +11,9 @@ public class ProdutoController {
         return "produto/listagemProdutos";
     }
 
+    @RequestMapping("/criaProduto")
+    public String produto() {
+        return "produto/produto";
+    }
+
 }

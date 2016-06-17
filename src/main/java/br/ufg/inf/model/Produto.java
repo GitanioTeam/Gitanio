@@ -27,11 +27,11 @@ public class Produto {
     @Override
     public String toString() {
         return "Produto{" +
-                "descricao='" + descricao + '\'' +
-                ", nome='" + nome + '\'' +
-                ", id=" + id +
-                ", categoria=" + categoria +
-                '}';
+            "descricao='" + descricao + '\'' +
+            ", nome='" + nome + '\'' +
+            ", id=" + id +
+            ", categoria=" + categoria +
+            '}';
     }
 
     public Long getId() {

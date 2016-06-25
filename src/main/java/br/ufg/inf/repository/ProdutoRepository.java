@@ -10,6 +10,6 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "produtos", path = "produtos")
 public interface ProdutoRepository extends PagingAndSortingRepository<Produto, Long> {
 
-    List<Produto> findByNome(@Param("nome") String nome);
+    List<Produto> findByCodigo(@Param("codigo") Integer codigo);
 
 }

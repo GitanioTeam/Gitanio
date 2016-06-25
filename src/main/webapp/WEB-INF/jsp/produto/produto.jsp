@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,7 @@
     </div>
 </nav>
 <div class="row">
-    <form class="col s5 offset-s3">
+    <form action="/salvaProduto" class="col s5 offset-s3" method="post">
         <div class="row">
             <h4>Adicionar novo produto</h4>
         </div>
@@ -42,7 +43,7 @@
         </div>
         <div class="row">
             <div class="input-field col s4">
-                <input id="precoUnitario" name="quantidadeMinima" class="validate" type="number" min="1" step="0.01"/>
+                <input id="precoUnitario" name="valorUnitario" class="validate" type="number" min="1" step="0.01"/>
                 <label for="quantidadeMinima">Preço unitário</label>
             </div>
         </div>
@@ -54,20 +55,17 @@
         </div>
         <div class="row">
             <div class="col s6 input-field">
-                <select id="categoria" name="categoria" type="number" min="1">
-                    <option>Higiene</option>
-                    <option>Limpeza</option>
-                    <option>Frutas</option>
-                    <option>Tabacaria Nacional</option>
-                    <option>Tabacaria Internacional</option>
-                    <option>Utensílios para churrasco</option>
+                <select id="categoria" name="idCategoria" type="number" min="1">
+                    <c:forEach var="categoria" items="${listaCategorias}">
+                        <option value="${categoria.id}">${categoria.nome}</option>
+                    </c:forEach>
                 </select>
                 <label for="categoria">Categoria</label>
             </div>
         </div>
         <div class="row">
             <a href="listagem_itens.html" class="waves-effect btn col offset-s4 s3 blue-grey">Cancelar</a>
-            <a href="listagem_itens.html" class="waves-effect btn col offset-s1 s2 blue-grey">Salvar</a>
+            <button type="submit" class="waves-effect btn col offset-s1 s2 blue-grey">Salvar</button>
         </div>
     </form>
 </div>

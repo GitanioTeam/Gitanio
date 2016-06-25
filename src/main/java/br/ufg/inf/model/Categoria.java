@@ -17,9 +17,9 @@ public class Categoria {
     protected Categoria() {
     }
 
-    public Categoria(String descricao, String nome) {
-        this.descricao = descricao;
+    public Categoria(String nome, String descricao) {
         this.nome = nome;
+        this.descricao = descricao;
     }
 
     public Long getId() {

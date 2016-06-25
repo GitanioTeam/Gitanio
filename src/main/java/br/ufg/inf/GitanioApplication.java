@@ -23,27 +23,30 @@ public class GitanioApplication {
     @Bean
     public CommandLineRunner demo(ProdutoRepository produtoRepository, CategoriaRepository categoriaRepository) {
         return (args) -> {
-            produtoRepository.save(new Produto("Sucrilhos", "Kellogs"));
-            produtoRepository.save(new Produto("Leite de Vaca", "De Vaca"));
-            produtoRepository.save(new Produto("Leite de Cabra", "De cabra mesmo"));
-            produtoRepository.save(new Produto("Alface", "Tomate"));
+            Categoria categoriaComida = new Categoria("Comida", "Categoria para alimentos em geral");
+            Categoria categoriaBrinquedos = new Categoria("Brinquedos", "Brinquedos da seção infantil");
+            categoriaRepository.save(categoriaComida);
+            categoriaRepository.save(categoriaBrinquedos);
+
+            produtoRepository.save(new Produto(14567, "Sucrilhos Kellogs", 18.0, 5, categoriaComida));
+            produtoRepository.save(new Produto(22345, "Leite de vaca", 2.89, 10, categoriaComida));
+            produtoRepository.save(new Produto(37642, "Jessie - Toy Story", 187.99, 1, categoriaBrinquedos));
+            produtoRepository.save(new Produto(4364, "Horácio - Pelúcia", 57.50, 3, categoriaBrinquedos));
 
             // All saved!
             for (Produto produto : produtoRepository.findAll()) {
                 log.info(produto.toString());
             }
 
-            Categoria categoriaComida = new Categoria("Comida", "Yummy");
-            categoriaRepository.save(categoriaComida);
 
-            Produto alface = produtoRepository.findOne(4L);
-            log.info("Found : " + alface);
-            categoriaComida = categoriaRepository.findOne(1L);
-            alface.setCategoria(categoriaComida);
-            produtoRepository.save(alface);
+            Produto horacio = produtoRepository.findOne(4L);
+            log.info("Found : " + horacio);
+            categoriaBrinquedos = categoriaRepository.findByNome("Brinquedos");
+            horacio.setCategoria(categoriaBrinquedos);
+            produtoRepository.save(horacio);
 
-            log.info("By last name:");
-            for (Produto produto : produtoRepository.findByNome("Alface")) {
+            log.info("By product code:");
+            for (Produto produto : produtoRepository.findByCodigo(4)) {
                 log.info(produto.toString());
             }
         };

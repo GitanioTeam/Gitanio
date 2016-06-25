@@ -8,7 +8,7 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    String nome;
+    Integer codigo;
     String descricao;
     Double valorUnitario;
     Integer quantidadeMinima;
@@ -19,16 +19,24 @@ public class Produto {
     protected Produto() {
     }
 
-    public Produto(String nome, String descricao) {
-        this.nome = nome;
+    public Produto(Integer codigo, String descricao) {
+        this.codigo = codigo;
         this.descricao = descricao;
+    }
+
+    public Produto(Integer codigo, String descricao, Double valorUnitario, Integer quantidadeMinima, Categoria categoria) {
+        this.codigo = codigo;
+        this.descricao = descricao;
+        this.valorUnitario = valorUnitario;
+        this.quantidadeMinima = quantidadeMinima;
+        this.categoria = categoria;
     }
 
     @Override
     public String toString() {
         return "Produto{" +
             "descricao='" + descricao + '\'' +
-            ", nome='" + nome + '\'' +
+            ", codigo='" + codigo + '\'' +
             ", id=" + id +
             ", categoria=" + categoria +
             '}';
@@ -42,12 +50,12 @@ public class Produto {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public Integer getCodigo() {
+        return codigo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
     }
 
     public String getDescricao() {

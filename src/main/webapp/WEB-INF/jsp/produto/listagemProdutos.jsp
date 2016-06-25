@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
@@ -40,90 +41,23 @@
         </thead>
 
         <tbody>
-        <tr>
-            <td>12587</td>
-            <td>Budweiser 343ml</td>
-            <td>Cervejas Importadas</td>
-            <td>17</td>
-            <td>10</td>
-            <td>R$2,99</td>
-            <td>
-                <a class="btn-floating btn-tiny waves-effect waves-light red" href="novo_item.html"><i
+        <c:forEach var="produto" items="${listaProdutos}">
+            <tr>
+                <td>${produto.codigo}</td>
+                <td>${produto.descricao}</td>
+                <td>${produto.categoria.descricao}</td>
+                    <%--TODO: Implementar quantidade em estoque--%>
+                <td>10</td>
+                <td>${produto.quantidadeMinima}</td>
+                <td>${produto.valorUnitario}</td>
+                <td>
+                    <a class="btn-floating btn-tiny waves-effect waves-light red"><i
                         class="material-icons">mode_edit</i></a>
                 <a class="btn-floating btn-tiny waves-effect waves-light red"><i
                         class="material-icons">delete</i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>12576</td>
-            <td>Corona Extra 355 ml</td>
-            <td>Cervejas Importadas</td>
-            <td>12</td>
-            <td>10</td>
-            <td>R$5,49</td>
-            <td>
-                <a class="btn-floating btn-tiny waves-effect waves-light red" href="novo_item.html"><i
-                        class="material-icons">mode_edit</i></a>
-                <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">delete</i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>11579</td>
-            <td>Antarctica Cristal 355ml</td>
-            <td>Cervejas Nacionais</td>
-            <td>32</td>
-            <td>20</td>
-            <td>R$1,99</td>
-            <td>
-                <a class="btn-floating btn-tiny waves-effect waves-light red" href="novo_item.html"><i
-                        class="material-icons">mode_edit</i></a>
-                <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">delete</i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>11579</td>
-            <td>Charuto Alonso Menendez Corona Nº 20</td>
-            <td>Tabacaria Nacional</td>
-            <td>20</td>
-            <td>5</td>
-            <td>R$23,90</td>
-            <td>
-                <a class="btn-floating btn-tiny waves-effect waves-light red" href="novo_item.html"><i
-                        class="material-icons">mode_edit</i></a>
-                <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">delete</i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>11579</td>
-            <td>Charuto Robt Burns Black Watch Tubo</td>
-            <td>Tabacaria Americana</td>
-            <td>5</td>
-            <td>10</td>
-            <td>R$11,80</td>
-            <td>
-                <a class="btn-floating btn-tiny waves-effect waves-light red" href="novo_item.html"><i
-                        class="material-icons">mode_edit</i></a>
-                <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">delete</i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>11579</td>
-            <td>Carvão Vegetal QUALITÁ Pacote 5kg</td>
-            <td>Utensílios para Churrasco</td>
-            <td>10</td>
-            <td>15</td>
-            <td>R$32,90</td>
-            <td>
-                <a class="btn-floating btn-tiny waves-effect waves-light red" href="novo_item.html"><i
-                        class="material-icons">mode_edit</i></a>
-                <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">delete</i></a>
-            </td>
-        </tr>
+                </td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>

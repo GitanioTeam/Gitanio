@@ -52,9 +52,9 @@
                 <td>${produto.valorUnitario}</td>
                 <td>
                     <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">mode_edit</i></a>
-                <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                        class="material-icons">delete</i></a>
+                            class="material-icons">mode_edit</i></a>
+                    <a class="btn-floating btn-tiny waves-effect waves-light red"><i
+                            class="material-icons" onclick="produtoAux.excluirProduto(${produto.id})">delete</i></a>
                 </td>
             </tr>
         </c:forEach>
@@ -79,6 +79,7 @@
 
 <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
 <script src="../js/materialize.min.js"></script>
+<script src="../js/produto.js"></script>
 <script type="text/javascript"> // Enough JS to activate Materialize</script>
 </body>
 </html>

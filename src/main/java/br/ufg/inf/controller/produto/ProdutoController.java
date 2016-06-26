@@ -58,4 +58,11 @@ public class ProdutoController {
         return "produto/listagemProdutos";
     }
 
+    @RequestMapping("/excluirProduto")
+    public String excluirProduto(Long idProduto) {
+        produtoRepository.delete(idProduto);
+
+        return "produto/listagemProdutos";
+    }
+
 }

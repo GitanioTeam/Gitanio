@@ -11,4 +11,15 @@ public class IndexController {
         return "paginaInicial";
     }
 
+    @RequestMapping("/login")
+    public String loginForm() {
+        return "login";
+    }
+
+    @RequestMapping("/recuperaConta")
+    public String recuperaConta() {
+        return "recuperaConta";
+    }
+
+
 }

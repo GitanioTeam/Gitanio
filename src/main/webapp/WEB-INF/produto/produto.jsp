@@ -29,7 +29,7 @@
     <div class="row">
         <form action="/salvaProduto" class="col s5 offset-s3" method="post">
             <div class="row">
-                <h4>Adicionar novo produto</h4>
+                <h4>Cadastrar novo Produto</h4>
             </div>
             <div class="row">
                 <div class="input-field col s4">

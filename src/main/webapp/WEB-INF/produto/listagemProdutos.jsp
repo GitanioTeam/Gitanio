@@ -52,7 +52,7 @@
                         <td>${produto.valorUnitario}</td>
                         <td>
                             <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                                    class="material-icons">mode_edit</i></a>
+                                    class="material-icons" onclick="produtoAux.editarProduto(${produto.id})">mode_edit</i></a>
                             <a class="btn-floating btn-tiny waves-effect waves-light red"><i
                                     class="material-icons" onclick="produtoAux.excluirProduto(${produto.id})">delete</i></a>
                         </td>

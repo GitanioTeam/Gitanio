@@ -11,4 +11,13 @@ Produto.prototype.excluirProduto = function (idProduto) {
         });
 };
 
+Produto.prototype.editarProduto = function (idProduto) {
+    $.post("/editarProduto", {
+        "idProduto" : idProduto
+    })
+        .done(function () {
+            location.reload();
+        });
+};
+
 var produtoAux = new Produto();

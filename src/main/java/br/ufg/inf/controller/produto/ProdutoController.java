@@ -37,6 +37,21 @@ public class ProdutoController {
         return "produto/produto";
     }
 
+    @RequestMapping("/editarProduto")
+    public String editarProduto(Long idProduto) {
+
+        Iterable<Categoria> listaCategorias = categoriaRepository.findAll();
+        Produto produto = produtoRepository.findOne(idProduto);
+
+        model.addAttribute("listaCategorias", listaCategorias);
+        model.addAttribute("codigo",produto.getCodigo());
+        model.addAttribute("descricao",produto.getDescricao());
+        model.addAttribute("precoUnitario",produto.getValorUnitario());
+        model.addAttribute("quantidadeMinima",produto.getQuantidadeMinima());
+
+        return "produto/criaProduto";
+    }
+
     @RequestMapping("/salvaProduto")
     public String salvaProduto(Integer codigo, String descricao, Long idCategoria,
                                Double valorUnitario, Integer quantidadeMinima, Model model) {

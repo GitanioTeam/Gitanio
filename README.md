@@ -1,5 +1,5 @@
-![Gitânio](https://github.com/gustavosotnas/Gitanio/wiki/Projeto/Extras/Icone/gitanio.png) Gitânio
-==================================================================================================
+![Gitânio](https://github.com/gustavosotnas/Gitanio/wiki/Icone/gitanio.png) Gitânio
+===================================================================================
 
 #### *Sistema de Gestão Comercial*
 

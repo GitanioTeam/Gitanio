@@ -3,6 +3,7 @@ package br.ufg.inf.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "produto")
 public class Produto {
 
     @Id

@@ -1,4 +1,4 @@
-    <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +13,7 @@
     </head>
 
     <body>
-        <nav class="blue-grey" role="navigation">
+        <nav class="light-green" role="navigation">
             <div class="nav-wrapper container">
                 <a id="logo-container" href="/" class="brand-logo">Gitanio</a>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -64,6 +64,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <a class="btn-floating btn-large waves-effect waves-light light-green" href="/"><i
+                        class="material-icons">fast_rewind</i></a>
             </div>
         </div>
 

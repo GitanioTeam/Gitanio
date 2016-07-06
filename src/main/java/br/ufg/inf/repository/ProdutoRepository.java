@@ -11,5 +11,6 @@ import java.util.List;
 public interface ProdutoRepository extends PagingAndSortingRepository<Produto, Long> {
 
     List<Produto> findByCodigo(@Param("codigo") Integer codigo);
+    Produto findOneByCodigo(@Param("codigo") Integer codigo);
 
 }

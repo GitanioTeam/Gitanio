@@ -7,6 +7,7 @@ import br.ufg.inf.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -37,8 +38,8 @@ public class ProdutoController {
         return "produto/produto";
     }
 
-    @RequestMapping("/editarProduto")
-    public String editarProduto(Long idProduto) {
+    @RequestMapping("/criaProduto/{id}")
+    public String produto(@PathVariable("id") Long idProduto, Model model) {
 
         Iterable<Categoria> listaCategorias = categoriaRepository.findAll();
         Produto produto = produtoRepository.findOne(idProduto);
@@ -49,23 +50,34 @@ public class ProdutoController {
         model.addAttribute("precoUnitario",produto.getValorUnitario());
         model.addAttribute("quantidadeMinima",produto.getQuantidadeMinima());
 
-        return "produto/criaProduto";
+        return "produto/produto";
     }
 
     @RequestMapping("/salvaProduto")
     public String salvaProduto(Integer codigo, String descricao, Long idCategoria,
                                Double valorUnitario, Integer quantidadeMinima, Model model) {
 
+        Produto produto = produtoRepository.findOneByCodigo(codigo);
         Categoria categoria = categoriaRepository.findOne(idCategoria);
 
-        Produto produto = new Produto(
-            codigo,
-            descricao,
-            valorUnitario,
-            quantidadeMinima,
-            categoria
-        );
-        produtoRepository.save(produto);
+        if (produto == null) {
+
+            Produto produtoNovo = new Produto(
+                codigo,
+                descricao,
+                valorUnitario,
+                quantidadeMinima,
+                categoria
+            );
+            produtoRepository.save(produtoNovo);
+        }
+        else{
+            produto.setCodigo(codigo);
+            produto.setDescricao(descricao);
+            produto.setCategoria(categoria);
+            produto.setQuantidadeMinima(quantidadeMinima);
+            produtoRepository.save(produto);
+        }
 
         Iterable<Produto> listaProdutos = produtoRepository.findAll();
         model.addAttribute("listaProdutos", listaProdutos);

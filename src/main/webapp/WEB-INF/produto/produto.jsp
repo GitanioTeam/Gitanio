@@ -30,23 +30,23 @@
             </div>
             <div class="row">
                 <div class="input-field col s4">
-                    <input id="codigo" name="codigo" class="validate" type="number" min="1" value="${codigo}"/>
+                    <input id="codigo" name="codigo" class="validate" type="number" min="1" value="${produto.getCodigo()}"/>
                     <label for="codigo">Código</label>
                 </div>
                 <div class="input-field col s8">
-                    <input id="descricao" name="descricao" class="validate" type="text" min="1" value="${descricao}"/>
+                    <input id="descricao" name="descricao" class="validate" type="text" min="1" value="${produto.getDescricao()}"/>
                     <label for="descricao">Descrição</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s4">
-                    <input id="precoUnitario" name="valorUnitario" class="validate" type="number" min="1" step="0.01" value="${precoUnitario}"/>
+                    <input id="precoUnitario" name="valorUnitario" class="validate" type="number" min="1" step="0.01" value="${produto.getValorUnitario()}"/>
                     <label for="quantidadeMinima">Preço unitário</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s4">
-                    <input id="quantidadeMinima" name="quantidadeMinima" class="validate" type="number" min="1" value="${quantidadeMinima}"/>
+                    <input id="quantidadeMinima" name="quantidadeMinima" class="validate" type="number" min="1" value="${produto.getQuantidadeMinima()}"/>
                     <label for="quantidadeMinima">Qnt. mínima</label>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="row">
-                <a href="listagem_itens.html" class="waves-effect btn col offset-s4 s3 blue-grey">Cancelar</a>
+                <a href="<c:url value="/listarProdutos/"/>" class="waves-effect btn col offset-s4 s3 blue-grey">Cancelar</a>
                 <button type="submit" class="waves-effect btn col offset-s1 s2 blue-grey">Salvar</button>
             </div>
         </form>

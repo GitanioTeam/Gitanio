@@ -45,10 +45,7 @@ public class ProdutoController {
         Produto produto = produtoRepository.findOne(idProduto);
 
         model.addAttribute("listaCategorias", listaCategorias);
-        model.addAttribute("codigo",produto.getCodigo());
-        model.addAttribute("descricao",produto.getDescricao());
-        model.addAttribute("precoUnitario",produto.getValorUnitario());
-        model.addAttribute("quantidadeMinima",produto.getQuantidadeMinima());
+        model.addAttribute("produto",produto);
 
         return "produto/produto";
     }
@@ -61,7 +58,6 @@ public class ProdutoController {
         Categoria categoria = categoriaRepository.findOne(idCategoria);
 
         if (produto == null) {
-
             Produto produtoNovo = new Produto(
                 codigo,
                 descricao,
@@ -70,8 +66,7 @@ public class ProdutoController {
                 categoria
             );
             produtoRepository.save(produtoNovo);
-        }
-        else{
+        } else {
             produto.setCodigo(codigo);
             produto.setDescricao(descricao);
             produto.setCategoria(categoria);

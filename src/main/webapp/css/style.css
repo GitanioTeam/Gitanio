@@ -1,0 +1,21 @@
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+.menu{
+    background-color: #b2ea72;
+}
+.menu_dropdown{
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.link a{
+    color: #fff;
+}
+
+.telaLogin{
+    margin-top: 55px;
+}

@@ -12,6 +12,10 @@ public class Venda extends Movimentacao {
     Double desconto;
     String nomeVendedor;
 
+    public Venda() {
+
+    }
+
     public Venda(String numeroVenda, Double desconto, String nomeVendedor) {
         this.numeroVenda = numeroVenda;
         this.desconto = desconto;

@@ -12,13 +12,13 @@
           media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>GitanioStock</title>
+    <title>Gitanio</title>
 </head>
 <body class="row">
 
     <nav>
         <div class="nav-wrapper blue-grey">
-            <a href="/" class="brand-logo left">GitanioStock</a>
+            <a href="/" class="brand-logo left">Gitanio</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="listarProdutos">Listagem</a></li>
                 <li><a href="movimentacao.html">Movimentação</a></li>

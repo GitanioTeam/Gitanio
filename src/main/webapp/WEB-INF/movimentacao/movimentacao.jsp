@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,87 +45,35 @@
         </thead>
 
         <tbody>
+        <thead>
         <tr>
-            <td>Compra</td>
-            <td>1</td>
-            <td>2345</td>
-            <td>10</td>
-            <td>Alberto Silva</td>
-            <td>Ikari Shinji</td>
-            <td>R$500,00</td>
+            <th data-field="Nome">Tipo</th>
+            <th data-field="Id">ID</th>
+            <th data-field="Produto">Produto</th>
+            <th data-field="Quantidade">Quantidade</th>
+            <th data-field="ClienteFornecedor">Cliente/Fornecedor</th>
+            <th data-field="Responsavel">Reponsável</th>
+            <th data-field="ValorTotal">Valor Total</th>
         </tr>
-        <tr>
-            <td>Venda</td>
-            <td>2</td>
-            <td>34542</td>
-            <td>10</td>
-            <td>Izanagi Kaworu</td>
-            <td>Asuka Langrey</td>
-            <td>R$900,00</td>
-        </tr>
-        <tr>
-            <td>Compra</td>
-            <td>3</td>
-            <td>2345</td>
-            <td>10</td>
-            <td>Daniela Pontes</td>
-            <td>Marla Singer</td>
-            <td>R$1000,00</td>
-        </tr>
-        <tr>
-            <td>Compra</td>
-            <td>4</td>
-            <td>99667</td>
-            <td>10</td>
-            <td>Marcos Manolo Figueiredo</td>
-            <td>Marla Singer</td>
-            <td>R$1000,00</td>
-        </tr>
-        <tr>
-            <td>Venda</td>
-            <td>5</td>
-            <td>9554</td>
-            <td>10</td>
-            <td>Yuri Sudoku</td>
-            <td>Ikari Shinji</td>
-            <td>R$1000,00</td>
-        </tr>
-        <tr>
-            <td>Compra</td>
-            <td>6</td>
-            <td>66112</td>
-            <td>10</td>
-            <td>Hellena Pêra</td>
-            <td>Alberto Silva</td>
-            <td>R$1000,00</td>
-        </tr>
-        <tr>
-            <td>Venda</td>
-            <td>7</td>
-            <td>66643</td>
-            <td>10</td>
-            <td>Pedro Álvares Cabral</td>
-            <td>Ikari Shinji</td>
-            <td>R$1000,00</td>
-        </tr>
-        <tr>
-            <td>Compra</td>
-            <td>8</td>
-            <td>5553</td>
-            <td>10</td>
-            <td>Alberto Silva</td>
-            <td>Ikari Shinji</td>
-            <td>R$500,00</td>
-        </tr>
-        <tr>
-            <td>Venda</td>
-            <td>9</td>
-            <td>243555</td>
-            <td>10</td>
-            <td>Izanagi Kaworu</td>
-            <td>Asuka Langrey</td>
-            <td>R$900,00</td>
-        </tr>
+        </thead>
+
+        <c:forEach var="produto" items="${listaProdutos}">
+            <tr>
+                <td>${produto.codigo}</td>
+                <td>${produto.descricao}</td>
+                <td>${produto.categoria.descricao}</td>
+                    <%--TODO: Implementar quantidade em estoque--%>
+                <td>10</td>
+                <td>${produto.quantidadeMinima}</td>
+                <td>${produto.valorUnitario}</td>
+                <td>
+                    <a class="btn-floating btn-tiny waves-effect waves-light red"><i
+                            class="material-icons">mode_edit</i></a>
+                    <a class="btn-floating btn-tiny waves-effect waves-light red"><i
+                            class="material-icons" onclick="produtoAux.excluirProduto(${produto.id})">delete</i></a>
+                </td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>

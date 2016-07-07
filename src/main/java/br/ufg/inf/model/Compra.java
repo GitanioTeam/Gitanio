@@ -1,5 +1,8 @@
 package br.ufg.inf.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Compra extends Movimentacao {
 
     String numeroCompra;

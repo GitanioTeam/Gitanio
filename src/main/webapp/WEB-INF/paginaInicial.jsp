@@ -36,7 +36,7 @@
             <div class="col m2 container">
                 <ul id="dropdownEstoque" class="dropdown-content">
                     <li><a href="/novaCompra">Realizar Compra</a></li>
-                    <%--<li><a href="#">Vender Produto</a></li>--%>
+                    <li><a href="/novaVenda">Realizar Venda</a></li>
                     <%--<li><a href="#">Pedido de Compra</a></li>--%>
                     <%--<li><a href="#">Recebimento Produto</a></li>--%>
                 </ul>

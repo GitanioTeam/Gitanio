@@ -55,9 +55,9 @@ public class VendaController {
             valorTotal);
 
         vendaRepository.save(novaVenda);
-
     }
 
+    //TODO: Mover para o serviço de movimentação
     private List<Item> construirListaItensFromJSON(String itensJSON) {
         ObjectMapper mapper = new ObjectMapper();
         List<Map> listaMapas = null;

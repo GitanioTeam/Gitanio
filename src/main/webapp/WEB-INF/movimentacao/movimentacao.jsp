@@ -17,7 +17,7 @@
 <body class="row">
 <nav>
     <div class="nav-wrapper blue-grey">
-        <a href="index.html" class="brand-logo left">GitanioStock</a>
+        <a href="/" class="brand-logo left">GitanioStock</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/listarProdutos">Listagem</a></li>
             <li class="active">Movimentação</li>

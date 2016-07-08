@@ -11,6 +11,7 @@
           media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="/js/movimentacao.js"></script>
     <title>Gitânio - Nova Compra</title>
 </head>
 <body class="row">
@@ -33,12 +34,12 @@
 <div class="row">
     <div class="input-field col s3 offset-s3">
         <input id="fornecedor" name="fornecedor" type="text"
-               placeholder="Fornecedor" class="validate">
+               class="validate">
         <label for="fornecedor">Nome do Fornecedor</label>
     </div>
     <div class="input-field col s3">
         <input id="documento" name="documento" type="text"
-               placeholder="015.132.131.312" class="validate">
+               class="validate">
         <label for="documento">Número do Documento</label>
     </div>
 </div>
@@ -58,7 +59,8 @@
     </div>
     <div class="input-field col right-align">
         <a href="#">
-            <button class="twaves-effect waves-light btn blue-grey">
+            <button type="button" onclick="movimentacaoAux.adicionarProdutoMovimentacao()"
+                    class="twaves-effect waves-light btn blue-grey">
                 Adicionar
             </button>
         </a>
@@ -66,47 +68,36 @@
 </div>
 
 <div class="row">
-    <table class="col s6 offset-s3 centered">
+    <table id="tabelaProdutos" class="col s6 offset-s3 centered">
         <thead>
         <tr>
             <th data-field="Descrição do Produto">Descrição do Produto</th>
             <th data-field="Quantidade">Quantidade</th>
-            <th data-field="Preco">Preço</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Macarrão Emege</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Pizza de frango com catupiry</td>
-            <td>25</td>
-        </tr>
         </tbody>
     </table>
 </div>
 
 <div class="row">
     <div class="input-field col s3 offset-s3">
-        <input id="total" name="total" type="text"
-               placeholder="R$1.000,00" class="validate">
-        <label for="total">Valor total da compra</label>
+        <input id="valorTotal" name="total" type="text"
+               class="validate">
+        <label for="valorTotal">Valor total da compra</label>
     </div>
     <div class="input-field col s3">
         <input id="data" name="data" type="text"
-               placeholder="08/08/1988" class="validate">
+               class="validate">
         <label for="data">Data da Compra</label>
     </div>
 </div>
 
 <div class="row">
     <div class="input-field col s6 offset-s3 right-align">
-        <a href="/movimentacao">
-            <button class="waves-effect waves-light btn blue-grey">
-                Salvar
-            </button>
-        </a>
+        <button type="button" onclick="movimentacaoAux.salvarCompra()" class="waves-effect waves-light btn blue-grey">
+            Salvar
+        </button>
     </div>
 </div>
 

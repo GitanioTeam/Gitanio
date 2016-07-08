@@ -44,7 +44,7 @@ public class MovimentacaoController {
             movimentacoesDTO.add(new DTOMovimentacao(
                 "COMPRA",
                 compra.getNumeroCompra(),
-                compra.getNomeComprador(),
+                compra.getNomeFornecedor(),
                 "-",
                 compra.getValorTotal()
             ));

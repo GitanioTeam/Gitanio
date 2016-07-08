@@ -17,7 +17,7 @@
 <body class="row">
 
 <nav>
-    <div class="nav-wrapper teal darken-2">
+    <div class="nav-wrapper blue-grey">
         <a href="/" class="brand-logo left">Gitânio</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/listarProdutos">Listagem</a></li>
@@ -60,7 +60,7 @@
         </div>
         <div class="input-field col right-align">
             <a href="#">
-                <button type="button" class="twaves-effect waves-light btn" onclick="movimentacaoAux.adicionarProdutoMovimentacao()">
+                <button type="button" class="twaves-effect waves-light btn blue-grey" onclick="movimentacaoAux.adicionarProdutoMovimentacao()">
                     Adicionar
                 </button>
             </a>
@@ -100,7 +100,7 @@
 
     <div class="row">
         <div class="input-field col s6 offset-s3 right-align">
-            <button type="button" onclick="movimentacaoAux.salvarVenda()" class="twaves-effect waves-light btn">
+            <button type="button" onclick="movimentacaoAux.salvarVenda()" class="twaves-effect waves-light btn blue-grey">
                 Salvar
             </button>
         </div>

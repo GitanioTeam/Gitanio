@@ -31,10 +31,26 @@ Movimentacao.prototype.salvarVenda = function () {
 
     $.post('/registrarVenda', params)
         .success(function () {
-            window.location.href = './listarProdutos';
+            window.location.href = './movimentacao';
         });
 
 };
 
+Movimentacao.prototype.salvarCompra = function () {
+
+    var params = {
+        "documento": $('#documento').val(),
+        "fornecedor": $('#fornecedor').val(),
+        "itensJSON": JSON.stringify(this.itens),
+        "dataCompra": $('#data').val(),
+        "valorCompra": $('#valorTotal').val()
+    };
+
+    $.post('/registrarCompra', params)
+        .success(function () {
+            window.location.href = './movimentacao'
+        });
+
+};
 
 var movimentacaoAux = new Movimentacao();

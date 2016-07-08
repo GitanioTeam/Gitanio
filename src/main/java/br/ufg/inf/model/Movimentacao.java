@@ -3,19 +3,19 @@ package br.ufg.inf.model;
 import javax.persistence.*;
 import java.util.List;
 
-@MappedSuperclass
+@Entity
+@Inheritance
+@Table(name = "movimentacao")
+@DiscriminatorColumn(name="tipo_movimentacao")
 public abstract class Movimentacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     @OneToMany
-    @JoinColumn(name = "item_id")
+    @JoinColumn(name = "movimentacao_id")
     protected List<Item> itens;
     protected Double valorTotal;
-    @ManyToOne
-    @JoinColumn(name = "pessoa_id")
-    protected Pessoa pessoa;
 
     public Long getId() {
         return id;
@@ -41,11 +41,4 @@ public abstract class Movimentacao {
         this.valorTotal = valorTotal;
     }
 
-    public Pessoa getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
 }

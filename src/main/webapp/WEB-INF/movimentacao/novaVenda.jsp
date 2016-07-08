@@ -82,9 +82,9 @@
 
     <div class="row">
         <div class="input-field col s2 offset-s3">
-            <input id="total" name="totalVenda" type="text"
+            <input id="totalVenda" name="totalVenda" type="text"
                    placeholder="R$1.000,00" class="validate">
-            <label for="total">Valor total da venda</label>
+            <label for="totalVenda">Valor total da venda</label>
         </div>
         <div class="input-field col s2">
             <input id="desconto" name="desconto" type="text"

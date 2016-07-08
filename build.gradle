@@ -29,6 +29,7 @@ repositories {
 }
 
 dependencies {
+//    runtime('org.postgresql:postgresql:9.4.1208')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-tomcat')
     compile 'org.apache.tomcat.embed:tomcat-embed-jasper'

@@ -1,5 +1,5 @@
 function Movimentacao() {
-    this.produtosAdicionados = {};
+    this.itens = [];
 }
 
 Movimentacao.prototype.adicionarProdutoMovimentacao = function () {
@@ -12,7 +12,7 @@ Movimentacao.prototype.adicionarProdutoMovimentacao = function () {
         return;
     }
 
-    this.produtosAdicionados[idProduto] = quantidadeProduto;
+    this.itens.push({"idProduto": idProduto, "quantidade": quantidadeProduto});
 
     $('#tabelaProdutos tbody').append('<tr><td>' + descricaoProduto + '</td><td>' + quantidadeProduto + '</td></tr>');
 
@@ -21,9 +21,9 @@ Movimentacao.prototype.adicionarProdutoMovimentacao = function () {
 Movimentacao.prototype.salvarVenda = function () {
 
     var params = {
-        nomeCliente: $('#cliente').val(),
+        cliente: $('#cliente').val(),
         documento: $('#documento').val(),
-        produtosAdicionados: this.produtosAdicionados,
+        itensJSON: JSON.stringify(this.itens),
         valorTotal: $('#totalVenda').val(),
         desconto: $('#desconto').val(),
         vendedor: $('#vendedor').val()

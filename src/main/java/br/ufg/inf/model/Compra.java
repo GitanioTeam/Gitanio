@@ -1,8 +1,10 @@
 package br.ufg.inf.model;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue("COMPRA")
 public class Compra extends Movimentacao {
 
     String numeroCompra;

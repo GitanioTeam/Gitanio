@@ -1,5 +1,7 @@
 package br.ufg.inf.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,11 +10,19 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonIgnore
     Long id;
-    @ManyToOne
-    @JoinColumn(name = "produto_id")
-    Produto produto;
+    Long idProduto;
     Integer quantidade;
+//    Long movimentacao;
+
+    public Item() {
+    }
+
+    public Item(Long idProduto, Integer quantidade) {
+        this.idProduto = idProduto;
+        this.quantidade = quantidade;
+    }
 
     public Long getId() {
         return id;
@@ -22,12 +32,12 @@ public class Item {
         this.id = id;
     }
 
-    public Produto getProduto() {
-        return produto;
+    public Long getIdProduto() {
+        return idProduto;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setIdProduto(Long idProduto) {
+        this.idProduto = idProduto;
     }
 
     public Integer getQuantidade() {

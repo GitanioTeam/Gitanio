@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,31 +20,18 @@
         <a href="index.html" class="brand-logo left">GitanioStock</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/listarProdutos">Listagem</a></li>
-            <li class="active"><a href="movimentacao.html">Movimentação</a></li>
-            <li><a href="novo_item.html">Novo</a></li>
+            <li class="active">Movimentação</li>
+            <li><a href="/criarProduto">Novo</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="fixed-action-btn" style="bottom: 10px; right: 24px;">
-    <a href="nova_compra.html" class="waves-effect waves-light teal darken-2 btn">Nova Compra</a>
-    <a href="nova_venda.html" class="waves-effect waves-light teal darken-2 btn">Nova
-        Venda</a>
+    <a href="/novaCompra" class="waves-effect waves-light teal darken-2 btn">Nova Compra</a>
+    <a href="/novaVenda" class="waves-effect waves-light teal darken-2 btn">Nova Venda</a>
 </div>
 <div class="container">
     <table class="highlight">
-        <thead>
-        <tr>
-            <th data-field="name">Tipo</th>
-            <th data-field="id">ID</th>
-            <th data-field="number">Produto</th>
-            <th data-field="number">Quantidade</th>
-            <th data-field="name">Cliente/Fornecedor</th>
-            <th data-field="name">Reponsável</th>
-            <th data-field="number">Valor Total</th>
-        </tr>
-        </thead>
-
         <tbody>
         <thead>
         <tr>

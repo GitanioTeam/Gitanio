@@ -11,7 +11,7 @@
         <div class="nav-wrapper blue-grey">
                 <a href="/login" class="brand-logo left">Gitânio</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/logout">Sair</Conta></a></li>
+                    <li><a href="/logout">Sair da Conta</a></li>
                     <%--<li><a href="movimentacao.html">Movimentação</a></li>--%>
                     <%--<li><a href="/criaProduto">Novo</a></li>--%>
                 </ul>

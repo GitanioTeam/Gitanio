@@ -1,4 +1,4 @@
-package br.ufg.inf.controller.produto;
+package br.ufg.inf.controller.movimentacao;
 
 import br.ufg.inf.model.Categoria;
 import br.ufg.inf.model.Produto;

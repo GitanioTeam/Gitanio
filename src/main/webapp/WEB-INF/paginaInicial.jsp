@@ -68,7 +68,7 @@
                     <%--<li><a href="#">Contas a Receber</a></li>--%>
                     <%--<li><a href="#">Faturamento</a></li>--%>
                 </ul>
-                <a class="btn dropdown-button blue-grey" href="#" data-activates="dropdownRelatorio">Relatorio<i
+                <a class="btn dropdown-button blue-grey" href="#" data-activates="dropdownRelatorio">Relatório<i
                         class="mdi-navigation-arrow-drop-down right"></i></a>
             </div>
             <div class="col m2 container">

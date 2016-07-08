@@ -21,7 +21,7 @@
         <a href="/" class="brand-logo left">Gitânio</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/listarProdutos">Listagem</a></li>
-            <li><a href="movimentacao.html">Movimentação</a></li>
+            <li><a href="/movimentacao">Movimentação</a></li>
             <li><a href="/criarProduto">Novo</a></li>
         </ul>
     </div>

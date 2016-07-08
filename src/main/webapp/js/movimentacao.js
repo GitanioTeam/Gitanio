@@ -31,7 +31,7 @@ Movimentacao.prototype.salvarVenda = function () {
 
     $.post('/registrarVenda', params)
         .success(function () {
-            console.log('teste');
+            window.location.href = './listarProdutos';
         });
 
 };

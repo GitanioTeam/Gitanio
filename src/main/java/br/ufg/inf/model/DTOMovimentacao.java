@@ -4,18 +4,15 @@ public class DTOMovimentacao {
 
     private String tipo;
     private String numeroIdentificador;
-    private Integer quantidade;
     private String nomeCliente;
     private String nomeVendedor;
     private Double valorTotal;
 
     public DTOMovimentacao(String tipo, String numeroIdentificador,
-                           Integer quantidade,
                            String nomeCliente, String nomeVendedor,
                            Double valorTotal) {
         this.tipo = tipo;
         this.numeroIdentificador = numeroIdentificador;
-        this.quantidade = quantidade;
         this.nomeCliente = nomeCliente;
         this.nomeVendedor = nomeVendedor;
         this.valorTotal = valorTotal;
@@ -35,14 +32,6 @@ public class DTOMovimentacao {
 
     public void setNumeroIdentificador(String numeroIdentificador) {
         this.numeroIdentificador = numeroIdentificador;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
     }
 
     public String getNomeCliente() {

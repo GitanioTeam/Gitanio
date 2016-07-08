@@ -16,7 +16,7 @@
 </head>
 <body class="row">
 <nav>
-    <div class="nav-wrapper teal darken-2">
+    <div class="nav-wrapper blue-grey">
         <a href="index.html" class="brand-logo left">GitanioStock</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/listarProdutos">Listagem</a></li>
@@ -27,8 +27,8 @@
 </nav>
 
 <div class="fixed-action-btn" style="bottom: 10px; right: 24px;">
-    <a href="/novaCompra" class="waves-effect waves-light teal darken-2 btn">Nova Compra</a>
-    <a href="/novaVenda" class="waves-effect waves-light teal darken-2 btn">Nova Venda</a>
+    <a href="/novaCompra" class="waves-effect waves-light blue-grey  btn">Nova Compra</a>
+    <a href="/novaVenda" class="waves-effect waves-light blue-grey btn">Nova Venda</a>
 </div>
 <div class="container">
     <table class="highlight">
@@ -36,30 +36,26 @@
         <thead>
         <tr>
             <th data-field="Nome">Tipo</th>
-            <th data-field="Id">ID</th>
-            <th data-field="Produto">Produto</th>
-            <th data-field="Quantidade">Quantidade</th>
+            <th data-field="Id">Número identificador</th>
             <th data-field="ClienteFornecedor">Cliente/Fornecedor</th>
             <th data-field="Responsavel">Reponsável</th>
             <th data-field="ValorTotal">Valor Total</th>
         </tr>
         </thead>
 
-        <c:forEach var="produto" items="${listaProdutos}">
+        <c:forEach var="movimentacao" items="${movimentacoes}">
             <tr>
-                <td>${produto.codigo}</td>
-                <td>${produto.descricao}</td>
-                <td>${produto.categoria.descricao}</td>
-                    <%--TODO: Implementar quantidade em estoque--%>
-                <td>10</td>
-                <td>${produto.quantidadeMinima}</td>
-                <td>${produto.valorUnitario}</td>
-                <td>
-                    <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                            class="material-icons">mode_edit</i></a>
-                    <a class="btn-floating btn-tiny waves-effect waves-light red"><i
-                            class="material-icons" onclick="produtoAux.excluirProduto(${produto.id})">delete</i></a>
-                </td>
+                <td>${movimentacao.tipo}</td>
+                <td>${movimentacao.numeroIdentificador}</td>
+                <td>${movimentacao.nomeCliente}</td>
+                <td>${movimentacao.nomeVendedor}</td>
+                <td>${movimentacao.valorTotal}</td>
+                <%--<td>--%>
+                    <%--<a class="btn-floating btn-tiny waves-effect waves-light red"><i--%>
+                            <%--class="material-icons">mode_edit</i></a>--%>
+                    <%--<a class="btn-floating btn-tiny waves-effect waves-light red"><i--%>
+                            <%--class="material-icons" onclick="produtoAux.excluirProduto(${produto.id})">delete</i></a>--%>
+                <%--</td>--%>
             </tr>
         </c:forEach>
         </tbody>
@@ -68,7 +64,7 @@
 
 <ul class="pagination center">
     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active teal darken-2"><a href="#!">1</a></li>
+    <li class="active blue-grey"><a href="#!">1</a></li>
     <li class="waves-effect"><a href="#!">2</a></li>
     <li class="waves-effect"><a href="#!">3</a></li>
     <li class="waves-effect"><a href="#!">4</a></li>

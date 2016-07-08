@@ -102,7 +102,7 @@
 
 <div class="row">
     <div class="input-field col s6 offset-s3 right-align">
-        <a href="movimentacao.html">
+        <a href="/movimentacao">
             <button class="waves-effect waves-light btn blue-grey">
                 Salvar
             </button>

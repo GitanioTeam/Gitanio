@@ -7,7 +7,7 @@ Produto.prototype.excluirProduto = function (idProduto) {
             "idProduto": idProduto
         })
         .done(function () {
-            location.reload();
+            window.location.href = './listarProdutos';
         });
 };
 

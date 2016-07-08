@@ -52,4 +52,12 @@ public class Venda extends Movimentacao {
     public void setNomeVendedor(String nomeVendedor) {
         this.nomeVendedor = nomeVendedor;
     }
+
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
+    }
 }
